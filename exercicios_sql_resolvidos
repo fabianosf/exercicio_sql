@@ -1,0 +1,441 @@
+/*
+LISTA 1(EXERCICIOS SQL)
+-- criando database
+-- create database lista1;
+
+-- selecionando a database
+-- use lista1;
+
+-- create table alunos(codigo int, nome text, telefone text, cidade text);
+-- show tables;
+
+-- create table alunos2(codigo int, nome varchar(200), telefone varchar(50), cidade varchar(100));
+
+-- create table funcionarios(nome text, endereco text, telefone text, cidade text, estado text, cep text, rg text, cpf text, salario real);
+-- show tables;
+
+-- create table livro(codigo int, nome text, categoria text, resumo text, precocusto real, precovenda real);
+
+-- show schemas;
+-- create table estoque(codigo int, nomedoproduto text, categoria text, quantidade int, fornecedor text);
+
+-- create table notas(codigo int, nomedoaluno text, bim1 real, bim2 real, bim3 real, bim4 real);
+
+-- create table caixa(codigo int, data date, descricao text, debito real, credito real);
+
+-- create table contasapagar(codigo int, data_conta date, descricao text, valor real, data_pagamento real);
+
+-- create table contasareceber(codigo int, data_conta date, descricao text, valor real, data_recebimento date);
+
+-- create table filmes(codigo int, nome text, sinopse text, categoria text, diretor text);
+
+-- create table cds(codigo int, nome text, cantor text, ano int, quantidadedemusicas int);
+
+-- drop table alunos;
+-- drop table livros;
+-- drop table contasapagar;
+-- drop table contasareceber;
+-- drop table filmes;
+
+-- show tables;
+--  alter table estoque rename to produtos;
+ -- alter table notas rename to aprovados;
+--  alter table aprovados rename to notas;
+*/
+
+/*
+
+LISTA 2(EXERCICIOS SQL)
+
+-- alter table caixa rename to dinheiro;
+-- show tables;
+-- drop table dinheiro;
+-- drop tables notas;
+
+-- create table alunos(codigo int, nome text, telefone text, cidade text);
+-- alter table alunos add estado text;
+-- describe alunos;
+
+-- create table caixa(codigo int, descricao text, debito real, credito real);
+-- alter table caixa add observacao text;
+
+-- describe caixa;
+-- alter table alunos add cpf text;
+-- alter table caixa add saldo real;
+-- alter table alunos add rg text;
+-- describe alunos;
+-- alter table caixa rename to muito_dinheiro;
+-- alter table muito_dinheiro add cliente text;
+-- alter table muito_dinheiro add fornecedor text;
+-- alter table muito_dinheiro rename to caixa;
+
+-- show tables;
+-- drop table caixa;
+-- drop table alunos;
+
+-- alter table cds add gravadora text;
+-- alter table cds rename to meuscds;
+-- alter table meuscds rename to nossoscds;
+
+*/
+
+/*
+-- LISTA 3(EXERCICIOS SQL)
+-- create database lista2;
+-- use lista2;
+-- create table alunos(codigo int, nome text, telefone text, cidade text);
+-- create table funcionarios(codigo int, nome text, endereco text, telefone text, cidade text, estado text, cep text, rg text, cpf text, salario real);
+-- show tables;
+
+-- insert into alunos(codigo,nome,telefone,cidade)values(1,'Ana','9999-9999','Ituiutaba');
+
+-- select * from alunos;
+
+-- insert into alunos(codigo,nome,telefone,cidade)values(2,'Jose Buscape','9999-8888','Sao Paulo');
+-- select * from alunos;
+-- select nome, telefone from alunos;
+-- select nome, cidade from alunos;
+-- select codigo,telefone from alunos;
+
+-- insert into alunos(codigo,nome,telefone,cidade)values(3,'Pedro Alves','9999-8877','Rio de Janeiro');
+-- insert into alunos(codigo,nome,telefone,cidade)values(4,'Gabriela Santos','9999-3636','Salvador');
+-- insert into alunos(codigo,nome,telefone,cidade)values(5,'Joana Dantas','9999-3333','Alagoas');
+-- select * from alunos;
+-- select cidade, codigo, nome from alunos;
+-- insert into funcionarios(codigo,nome,endereco,telefone,cidade,estado,cep,rg,cpf,salario)
+-- values(1,'Jose Jacinto','Rua Verde','9988-0088','Sao Paulo','SP','20271030','66666666','98989',5.000);
+
+ -- insert into funcionarios(codigo,nome,endereco,telefone,cidade,estado,cep,rg,cpf,salario)
+ -- values(2,'Alice Border','Rua Amarelo','8888-9999','Parana','PR','202450987','55555555','989899',4.500); 
+ -- insert into funcionarios(codigo,nome,endereco,telefone,cidade,estado,cep,rg,cpf,salario)
+ -- values(3,'Paula Ferraz','Rua Vermelha','7777-9999','MG','Minas Gerais','303010909','36363636','33333333',6.300); 
+
+-- insert into funcionarios(codigo,nome,endereco,telefone,cidade,estado,cep,rg,cpf,salario)
+-- values(4,'Paola Meireles','Rua Rosa','7777-9999','Bahia','BH','60380501','63636363','9696699',7.500);
+
+select codigo, nome from funcionarios;
+*/
+
+/*
+
+-- LISTA 4(EXERCICIOS SQL)
+-- select nome, salario from funcionarios;
+-- select nome, telefone from funcionarios;
+-- select nome,rg,cpf from funcionarios;
+-- select nome,cidade from funcionarios;
+
+-- insert into funcionarios(codigo,nome,endereco,telefone,cidade,estado,cep,rg,cpf,salario)
+-- values(5,'Carla Dias','Rua Azul','9999-8787','Amazonia','AM','8585858','98989896','45232147',3.500);
+
+-- insert into funcionarios(codigo,nome,endereco,telefone,cidade,estado,cep,rg,cpf,salario)
+-- values(7,'Bianca Toledo','Rua Gelo','3131-3132','Minas Gerais','MG','36363636','989898666','15252458',4.200);
+
+-- select * from funcionarios;
+
+-- select nome, telefone from funcionarios;
+
+-- create table fornecedores(codigo int,nome text, endereco text, telefone text, cidade text, estado text, cep text, cnpj text, email text);
+-- alter table fornecedores add codigo int;
+-- describe fornecedores;
+-- drop table fornecedores;
+-- insert into fornecedores(codigo,nome,endereco,telefone,cidade,estado,cep,cnpj,email)
+-- values(1,'Patricia Luz','Rua Marrom','2222-9898','Rio de Janeiro','RJ','20234399','22222222','patricia@email.com');
+-- select * from fornecedores;
+-- insert into fornecedores(codigo,nome,endereco,telefone,cidade,estado,cep,cnpj,email)
+-- values(2,'Amanda Nunes','Rua Laranja','3333-4455','Sergipe','SE','23201090','88888889999','amanda@email.com');
+
+
+-- select * from funcionarios where codigo = 3;
+-- select * from fornecedores where codigo = 1;
+-- select * from alunos where codigo = 2;
+-- select * from funcionarios where codigo = 1;
+
+-- select nome,salario from funcionarios where codigo = 2;
+-- select nome,cidade from alunos where codigo = 1;
+
+-- select * from funcionarios where estado = 'MG';
+-- select * from funcionarios;
+
+
+-- select * from funcionarios where estado = 'GO';
+-- select * from funcionarios where estado = 'SP';
+
+-- insert into funcionarios(codigo,nome,endereco,telefone,cidade,estado,cep,rg,cpf,salario)
+-- values(8,'Paola Chaves','Rua Fogo','2525-36363','Sao Paulo','SP','26262625','101010101','85858589',5.600);
+
+-- select * from funcionarios;
+
+-- select * from funcionarios where estado = 'SP';
+
+-- create table livros(codigo int,nome text, categoria text, resumo text, precocusto real, precovenda real);
+
+describe livros;
+
+show tables;
+-- insert into livros(codigo,nome,categoria,resumo,precocusto,precovenda)
+-- values  (1, 'Livro SQL','Informatica','Banco de dados',80.50,120.50);
+
+-- insert into livros(codigo,nome,categoria,resumo,precocusto,precovenda)
+-- values(2,'Livro Python','Informatica','Programacao',90.50,130.50);
+
+-- insert into livros(codigo,nome,categoria,resumo,precocusto,precovenda)
+-- values(3,'Livro Java','Informatica','Programacao',90.30, 120.60);
+
+-- select * from livros;
+
+-- select nome,categoria from livros where codigo = 1;
+-- select nome,categoria from livros where codigo = 3;
+-- drop table livros;
+alter table alunos rename to estudantes;
+select * from estudantes;
+alter table estudantes rename to alunos;
+
+alter table alunos add estado text;
+select * from alunos;
+*/
+
+/*
+
+
+-- LISTA 5(EXERCICIOS SQL)
+-- create database lista3;
+-- use lista3;
+
+-- create table livros(id int, titulo text, autor_id int, editora_id int, estilo_id int, sinopse text, isbn text);
+-- create table editoras(id int, nome text, estado text, telefone text, email text);
+-- create table estilos(id int, nome text);
+-- create table autor(id int, nome text, cidade text, estado text, telefone text);
+-- alter table autor rename to autores;
+
+-- insert into livros(id,titulo,autor_id,editora_id,estilo_id,sinopse,isbn)values
+-- (1, 'O Menino de Pijama',1,1,1,'Conto Juvenil','858585858');
+-- insert into livros(id,titulo,autor_id,editora_id,estilo_id,sinopse,isbn)values
+-- (2, 'Cachinhos de Ouro',2,2,2,'Conto Juvenil','8787878788');
+-- insert into livros(id,titulo,autor_id,editora_id,estilo_id,sinopse,isbn)values
+-- (3, 'O Lobo Mau',3,3,3,'Conto Juvenil','989898989');
+
+-- insert into editoras(id,nome,estado,telefone,email)
+-- values (1, 'Editora Azul','Rio de Janeiro','9999-7878','editora_azul@email.com');
+-- insert into editoras(id,nome,estado,telefone,email)
+-- values (2, 'Editora Verde','Sao Paulo','9999-3636','editoria_verde@email.com');
+-- insert into editoras(id,nome,estado,telefone,email)
+-- values (3, 'Editora Amarelo','Minas Gerais','9988-4245','editora_amarelo@email.com');
+-- select * from editoras;
+-- insert into estilos(id,nome)values(1, 'Juvenil');
+-- insert into estilos(id,nome)values(2, 'Juvenil');
+-- insert into estilos(id,nome)values(3, 'Juvenil');
+
+
+-- insert into autores(id,nome,cidade,estado,telefone)values(1,'Paula Sinha','Minas Gerais','MG','9987-9693');
+-- insert into autores(id,nome,cidade,estado,telefone)values(2,'Joana Leite','Rio de Janeiro','RJ','9889-4023');
+-- insert into autores(id,nome,cidade,estado,telefone)values(3,'Anne Moca','Sao Paulo','SP','9369-4421');
+
+
+-- insert into livros(id,titulo,autor_id,editora_id,estilo_id,sinopse,isbn)values
+ -- (4, 'Menino Maluquinho',4,4,4,'Crianca','6969696969');
+-- insert into livros(id,titulo,autor_id,editora_id,estilo_id,sinopse,isbn)values
+-- (5, 'Cantando ao entardecer',5,5,5,'Drama','9898986633');
+-- insert into livros(id,titulo,autor_id,editora_id,estilo_id,sinopse,isbn)values
+-- (6, 'Alien e o Predador',6,6,6,'Ficcao','3434355667');
+-- insert into livros(id,titulo,autor_id,editora_id,estilo_id,sinopse,isbn)values
+-- (7, 'A Torre Fantasma',7,7,7,'Suspense','1111155555');
+-- insert into livros(id,titulo,autor_id,editora_id,estilo_id,sinopse,isbn)values
+-- (8, 'Titanic',8,8,8,'Romance','55555888999');
+
+-- select * from livros;
+
+-- select nome from estilos order by nome desc;
+
+-- select nome from autores order by nome desc;
+
+-- select nome,telefone from editoras;
+
+-- select nome from editoras;
+
+-- select nome from editoras where estado = 'Minas Gerais';
+
+-- select nome from estilos order by nome;
+-- select nome from estilos order by nome desc;
+-- select nome from autores where estado = 'SP';
+
+-- select * from estilos where id = 3;
+
+-- select * from autores where id = 2;
+
+-- select * from editoras where id = 1;
+
+-- insert into editoras(id,nome,estado,telefone,email)
+-- values (4, 'Editora Bege','Rio de Grande do Sul','2525-6969','editora_bege@email.com');
+-- insert into editoras(id,nome,estado,telefone,email)
+-- values (5, 'Editora Roxa','Mato Grosso','2424-7755','editora_roxa@email.com');
+-- insert into editoras(id,nome,estado,telefone,email)
+-- values (6, 'Editora Laranja','Rio de Grande do Sul','2121-5693','editora_laranja@email.com');
+
+-- select * from editoras;
+
+-- delete from editoras where id = 1;
+
+*/
+
+/*
+
+-- LISTA 6(EXERCICIOS SQL)
+-- use lista3;
+
+-- ADICIONANDO MAIS RESTRICOES
+-- QUERO QUE RETORNE TB SOMENTE OS NUMEROS DE TELEFONE DAS EDITORAS QUE COMECEM COM 9
+-- select l.titulo, a.nome, e.nome, e.telefone
+-- from livro l, autor a, editora e
+-- where a.id = l.autor_id 
+-- and e.id = l.editora_id
+-- and e.telefone like '9%';
+
+ 
+
+-- select l.titulo, e.nome from livro l, estilo e
+-- where e.id = l.estilo_id;
+
+-- select l.titulo, e.nome from livro l, editora e
+-- where e.id = l.editora_id;
+
+-- select l.titulo, a.nome from livro l, autor a
+-- where a.nome = l.autor_id;
+
+
+-- select l.titulo, e.nome from livro l, estilo e
+-- where e.id = l.estilo_id
+-- and e.nome like 'A%';
+
+-- Como nao tem R retorna Null
+-- select l.titulo, e.nome from livro l, estilo e
+-- where e.id = l.estilo_id
+-- and e.nome like 'C%';
+
+-- Fiz com a letra A
+-- select li.titulo, ed.nome, es.nome, au.nome
+-- from livro li, editora ed, estilo es, autor au
+-- where ed.id = li.editora_id and es.id = li.editora_id
+-- and au.id = li.autor_id 
+-- and au.nome like 'A%';
+
+-- selecione o nome do autor, da editora, do estilo e do livro
+-- de todos os livros de editoras paulistas
+-- select li.titulo, au.nome,ed.nome, es.nome,ed.estado
+-- from livro li, autor au, editora ed, estilo es
+-- where au.id = li.autor_id and ed.id = li.editora_id 
+-- and es.id = li.estilo_id 
+-- and ed.estado = 'Sao Paulo';
+
+-- use lista3;
+
+
+-- select li.titulo, au.nome 
+-- from livro li, autor au
+-- where au.id = li.autor_id
+-- order by au.nome;
+*/
+
+/*
+
+-- LISTA 7(EXERCICIOS SQL)
+
+-- select count(*) from editora;
+
+-- select avg(precovenda) as 'Media_Preco_Livros'
+-- from livro;
+
+-- update livro set precovenda = precovenda * 7
+-- where id = 1;
+
+-- use lista3;
+-- update livro
+-- set precovenda = precovenda + (precovenda * 0.07)
+-- where id =  1;
+
+-- select count(*) 
+-- from editora
+-- where estado = 'Minas Gerais';
+
+-- select estado,count(*) as 'Quantidade'
+-- from editora
+-- group by estado;
+
+-- update livro
+-- set precovenda = precovenda - (precovenda * 0.19)
+-- where id = 1;
+
+-- usando alias para max
+
+-- select max(id) 'Maior_Autor'
+-- from autor;
+
+-- select min(id) 'Menor_Autor'
+-- from autor;
+
+-- Como nao tem 40 coloquei 1
+-- select count(*)
+-- from editora
+-- group by estado
+-- having count(*) > 1;
+
+-- update livro
+-- set precovenda = precovenda + (precovenda * 0.075);
+
+-- delete from editora
+-- where estado = 'Rio de Grande do Sul';
+
+-- select titulo, precovenda,
+-- precovenda * 0.3 as 'Parcela 1',
+-- precovenda * 0.35 as 'Parcela 2',
+-- precovenda * 0.35 as 'Parcela 3'
+-- from livro;
+
+-- update editora 
+-- set estado = 'Minas Gerais'
+-- where estado = 'Rio de Janeiro';
+
+-- select count(*)
+-- from editora
+-- where nome like 'M%';
+
+-- update livro
+-- set precovenda = precovenda - (precovenda * 0.06);
+*/
+
+
+
+
+--> link exercícios: https://drive.google.com/drive/folders/1szz1axMrJxyihSANbAc9LHCHk8sNRcOZ
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
